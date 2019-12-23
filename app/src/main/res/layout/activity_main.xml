@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+
+
+    tools:context=".MainActivity">
+    <include
+        android:id="@+id/appbar"
+        layout="@layout/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="53dp">
+
+    </include>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linLayout"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+
+        <EditText
+            android:layout_width="3dp"
+            android:layout_height="60dp"
+            android:layout_weight="70"
+            android:textSize="25sp"
+            android:textColor="@color/colorBackground"
+            android:textStyle="bold"
+            android:hint="Type a sub-reddit"
+            android:layout_gravity="bottom"
+            android:textAlignment="center"
+            android:id="@+id/etFeedName"/>
+
+        <Button
+            android:id="@+id/btnRefreshFeed"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:paddingStart="20dp"
+            android:src="?android:attr/selectableItemBackground"
+            android:layout_gravity="center"
+            android:layout_weight="15"
+            android:background="@drawable/ic_search_black_24dp"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_below="@+id/linLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:id="@+id/listview">
+
+    </ListView>
+
+</RelativeLayout>
